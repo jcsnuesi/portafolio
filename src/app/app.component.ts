@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['../assets/css/styles.css']
 })
 export class AppComponent {
-  title = 'portafolio';
+ public title:string;
+
+ constructor(){
+  this.title = "NEDOM"
+ }
 }

@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http'
+
+
 
 //Importar routing
 import { routing, appRoutingProviders } from './app.routing';
@@ -10,6 +14,8 @@ import { PortafolioComponent } from './components/portafolio/portafolio.componen
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PortadaComponent } from './components/portada/portada.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +23,15 @@ import { PortadaComponent } from './components/portada/portada.component';
     PortafolioComponent,
     AboutComponent,
     ContactComponent,
-    PortadaComponent
+    PortadaComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    routing
+    routing,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

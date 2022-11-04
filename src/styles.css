@@ -8753,12 +8753,12 @@ fieldset:disabled .btn {
 
 .bg-primary {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+    background-color: var(--bs-dark);
 }
 
 .bg-secondary {
     --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity)) !important;
+    background-color: rgba(var(--bs-blue-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-success {
@@ -12457,7 +12457,7 @@ html {
     left: 0;
     transition: all 0.2s ease-in-out;
     opacity: 0;
-    background-color: rgba(26, 188, 156, 0.9);
+
 }
 
 .portfolio .portfolio-item .portfolio-item-caption:hover {

@@ -40,4 +40,44 @@ export class UserService {
     return this._http.post(this.url + 'login', param, { headers: header });
   }
 
+  getUserId(user:any):Observable<any>{
+   
+    return this._http.get(this.url + 'user/' + user)
+
+
+  }
+  
+  getUser(): Observable<any> {
+
+    return this._http.get(this.url + 'user')
+
+
+  }
+  
+  getFile(id:any):Observable<any>{
+
+    return this._http.get( this.url + 'avatar' + id)
+  }
+
+  // PROJECTS SERVICES
+
+  getProject(): Observable<any> {
+
+    return this._http.get(this.url + 'projects')
+  }
+
+
+  geTech():Observable<any>{
+
+    return this._http.get(this.url + '/techs')
+  }
+
+  geTechImg(img:any): Observable<any> {
+
+    return this._http.get(this.url + '/tech/' + img)
+  }
+
+
 }
+
+

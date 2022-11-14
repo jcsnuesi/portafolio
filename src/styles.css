@@ -138,13 +138,17 @@ h1,
 h2,
 .h2 {
     font-size: calc(1.325rem + 0.9vw);
+   
 }
+
+
 
 @media (min-width: 1200px) {
 
     h2,
     .h2 {
         font-size: 2rem;
+       
     }
 }
 
@@ -12498,4 +12502,12 @@ html {
 }
 a {
     cursor: pointer;
+}
+
+
+.icon-tech {
+     width: 150px;
+     height:150px;
+     border-radius: 900px;
+     overflow: hidden;
 }

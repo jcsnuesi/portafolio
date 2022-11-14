@@ -1,0 +1,25 @@
+
+<section class="page-section portfolio">
+<div class="container">
+   
+    <p class="display-1 mt-4">Skills:</p>
+
+        <div class="col-lg-12" *ngFor="let img of skills">
+
+            <span>
+                 <h1 class="display-3">{{img.title}}</h1>   
+            </span>
+         
+        <img class="img-fluid rounded mb-5 icon-tech" src="{{ url + 'tech/' + img.icon}}" alt="..." />
+
+            
+        <span>
+            <p class="display-4 mt-2">Level of knowledge:</p>
+            <h1 class="display-3">{{exp}}</h1>
+        </span>
+        </div>
+
+</div>
+
+
+</section>

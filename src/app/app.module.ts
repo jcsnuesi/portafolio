@@ -12,20 +12,20 @@ import { routing, appRoutingProviders } from './app.routing';
 import { AppComponent } from './app.component';
 import { PortafolioComponent } from './components/portafolio/portafolio.component';
 import { AboutComponent } from './components/about/about.component';
-import { ContactComponent } from './components/contact/contact.component';
 import { PortadaComponent } from './components/portada/portada.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginComponent } from './components/login/login.component';
+import { SkillsComponent } from './components/skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PortafolioComponent,
     AboutComponent,
-    ContactComponent,
     PortadaComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserModule,

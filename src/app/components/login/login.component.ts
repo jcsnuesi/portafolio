@@ -29,7 +29,12 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    console.log(this._userService.login)
   }
+
+
+  
 
   onSubmit(login:any){
 
@@ -38,8 +43,9 @@ export class LoginComponent implements OnInit {
 
         if (response) {
           this.status = 'success'
+          this.user = response
           this._router.navigate(['/inicio'])
-          console.log(response)
+         
           
         }
 

@@ -38,15 +38,16 @@ export class SkillsComponent implements OnInit {
 
           for (let i = 0; i < this.skills.length; i++) {
             this.level =  this.skills[i]["timeOfKnowledge"]
-            
+            console.log(this.level)
           }
+
           if (this.level === 1){
             this.exp = "50%"
-
+            console.log("Experiencian: "+ this.exp)
           }
 
           if (this.skills.timeOfKnowledge > 1) {
-            this.level = "70%"
+            this.level = "60%"
           }
           
           

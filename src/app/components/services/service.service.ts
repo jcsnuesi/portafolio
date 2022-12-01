@@ -77,6 +77,11 @@ export class UserService {
     return this._http.get(this.url + '/tech/' + img)
   }
 
+  getCert():Observable<any>{
+
+    return this._http.get(this.url + 'certs')
+  }
+
 
 }
 

@@ -1,15 +1,24 @@
 
 <section class="page-section portfolio">
 <div class="container">
+
    
     <p class="display-1 mt-4">Skills:</p>
 
+  
+        <button class="btn btn-outline-primary" style="max-width: 100%;" data-bs-toggle="modal" href="#exampleModalToggle"
+            role="button">
+
+            See certifications
+
+        </button>
+  
     <div class="row justify-content-center">
 
-        <div class="col-md-6 float-e" *ngFor="let img of skills">
-        
-           
 
+        <div class="col-md-6 float-e" *ngFor="let img of skills">
+                   
+           
                 <span>
                     <h1 class="display-3">{{img.title}}</h1>
                 </span>
@@ -21,8 +30,8 @@
                     <p class="display-6 mt-2">Time working with:</p>
                     <p class="display-3"><b>{{level}} years</b></p>
                 </div>
-
-
+               
+              
             
            <hr>
         </div>
@@ -34,5 +43,28 @@
      
 </div>
 
+<!-- .certName -->
+<div class="container">
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel"
+    tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalToggleLabel">Certifications</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngFor="let cer of certification">
+
+                <img src="{{url + 'cert/' + cer.certName }}" style="max-width: 100%;" alt="">
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
 
 </section>

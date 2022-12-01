@@ -15,6 +15,7 @@ export class SkillsComponent implements OnInit {
   public url:any;
   public level:any;
   public exp:any;
+  public certification:any;
   constructor(
     private _userService: UserService
   ) {
@@ -23,6 +24,8 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit(): void {
     this.getInfo()
+    this.getcert()
+    
   }
 
   getInfo(){
@@ -34,23 +37,14 @@ export class SkillsComponent implements OnInit {
         if (tech.status == 'success') {
           this.status = 'success'
           this.skills = tech.Tech
-          console.log(this.skills)
+          
 
           for (let i = 0; i < this.skills.length; i++) {
             this.level =  this.skills[i]["timeOfKnowledge"]
-            console.log(this.level)
+           
           }
 
-          if (this.level === 1){
-            this.exp = "50%"
-            console.log("Experiencian: "+ this.exp)
-          }
-
-          if (this.skills.timeOfKnowledge > 1) {
-            this.level = "60%"
-          }
-          
-          
+                
         }else{
           this.status = 'error'
 
@@ -65,6 +59,22 @@ export class SkillsComponent implements OnInit {
       }
     )
 
+
+  }
+
+  getcert(){
+
+    this._userService.getCert().subscribe(
+
+      response => {
+        this.certification = response.certifications
+        console.log(this.certification[0].certName)
+      },
+      error =>{
+
+        console.log(error)
+      }
+    )
 
   }
 
